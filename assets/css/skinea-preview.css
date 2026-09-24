@@ -1,0 +1,308 @@
+/* ====================================================
+   SKINÉA PREVIEW STYLES - EXACT MATCH TO MOCKUP
+   ==================================================== */
+
+:root {
+    --sk-bg: #F7F7F5;
+    --sk-card-bg: #FFFFFF;
+    --sk-card-soft: #F0EFEA;
+    --sk-green-primary: #284234;
+    --sk-green-dark: #1E3328;
+    --sk-green-soft: #E3E9E3;
+    --sk-text-dark: #1F2421;
+    --sk-text-muted: #6B726E;
+    --sk-border-color: #E5E4DF;
+}
+
+body.sk-preview-body {
+    background-color: var(--sk-bg);
+    font-family: 'Poppins', sans-serif;
+    color: var(--sk-text-dark);
+    overflow-x: hidden;
+}
+
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.x-small {
+    font-size: 0.75rem;
+}
+
+/* Floating Top Bar (Navigasi Kembali ke Case Study) */
+.sk-top-nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--sk-border-color);
+}
+
+/* Brand Navbar Logo */
+.sk-brand-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--sk-text-dark);
+    letter-spacing: 2px;
+}
+
+/* Navigation Links & Sliding Hover Animation */
+.sk-nav-container {
+    position: relative;
+}
+
+.sk-nav-link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--sk-text-dark);
+    text-decoration: none;
+    padding: 8px 16px;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.sk-nav-link:hover, .sk-nav-link.active {
+    color: var(--sk-green-primary);
+}
+
+/* Indicator Garis Meluncur saat Kursor Berpindah Menu */
+.sk-nav-slider {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--sk-green-primary);
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Buttons */
+.btn-sk-primary {
+    background-color: var(--sk-green-primary);
+    color: #FFFFFF;
+    border-radius: 30px;
+    padding: 10px 26px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-sk-primary:hover {
+    background-color: var(--sk-green-dark);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(40, 66, 52, 0.25);
+}
+
+.btn-sk-light {
+    background-color: #FFFFFF;
+    color: var(--sk-green-primary);
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-sk-light:hover {
+    background-color: #F8F8F8;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.sk-hero-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--sk-text-dark);
+}
+
+.sk-feature-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #E2E8E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--sk-green-primary);
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+
+/* Problem Section Card */
+.sk-problem-card {
+    background-color: var(--sk-card-soft);
+    border-radius: 20px;
+}
+
+.sk-cross-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #E0DDD5;
+    color: #666;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+}
+
+/* Solution Banner */
+.sk-solution-banner {
+    background-color: var(--sk-green-soft);
+    border-radius: 24px;
+}
+/* Micro interaction pada Benefit Card */
+.sk-benefit-card {
+    will-change: transform, opacity;
+    transition: box-shadow 0.3s ease;
+}
+
+.sk-benefit-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+/* Benefit Cards */
+.sk-benefit-card {
+    background-color: var(--sk-card-soft);
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.sk-benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+/* CTA Green Banner */
+.sk-cta-banner {
+    background-color: var(--sk-green-primary);
+    border-radius: 24px;
+    color: #FFFFFF;
+}
+
+/* Certification Bar */
+.sk-cert-bar {
+    border-top: 1px solid var(--sk-border-color);
+    border-bottom: 1px solid var(--sk-border-color);
+}
+
+.sk-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hilangkan ketergantungan pada CSS transition agar tidak bentrok dengan GSAP */
+.sk-fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+
+/* Glassmorphism Sticky Navbar on Scroll */
+.navbar.sk-navbar-scrolled {
+    background-color: rgba(247, 247, 245, 0.88) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    transition: background-color 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    transition: all 0.4s ease;
+}
+
+body.sk-preview-body {
+    padding-top: 80px; /* Offset fixed navbar */
+}
+
+/* Masking untuk Text Reveal Animation */
+.sk-mask-text {
+    overflow: hidden;
+    display: block;
+}
+
+/* Container Marquee untuk Certification Bar */
+.sk-marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.sk-marquee-content {
+    display: inline-flex;
+    gap: 3rem;
+    animation: skMarquee 20s linear infinite;
+}
+
+.sk-marquee-wrapper:hover .sk-marquee-content {
+    animation-play-state: paused;
+}
+
+@keyframes skMarquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Custom Cursor & Interactive Micro Hover */
+.sk-benefit-card, .btn-sk-primary, .btn-sk-light {
+    will-change: transform, opacity;
+}
+
+/* Mobile Adjustments untuk GSAP Safe Overflow */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.98);
+        padding: 1.5rem;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        margin-top: 0.75rem !important;
+    }
+}
+
+/* ====================================================
+   FIX HERO SECTION LAYOUT & BUTTON VISIBILITY
+   ==================================================== */
+
+/* Memastikan judul dan paragraf hero memiliki jarak yang pas */
+#home .sk-hero-title {
+    margin-bottom: 1.25rem !important;
+    line-height: 1.2;
+}
+
+#home p.text-muted {
+    margin-bottom: 1.75rem !important;
+    position: relative;
+    z-index: 2;
+}
+
+/* Memastikan tombol CTA selalu di atas & terlihat jelas */
+#home .btn-sk-primary {
+    position: relative;
+    z-index: 10;
+    display: inline-flex !important;
+    visibility: visible !important;
+}
+
+/* Merapikan gambar produk agar tidak miring berlebihan */
+#home img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
